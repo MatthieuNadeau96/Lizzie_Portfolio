@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lizzie_portfolio/screens/about_screen.dart';
+import 'package:lizzie_portfolio/screens/work_screen.dart';
+import 'package:lizzie_portfolio/widgets/home_icon_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -6,6 +10,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  void _handlePress(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     var deviceSize = MediaQuery.of(context).size;
@@ -27,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
             fit: StackFit.expand,
             children: [
               Align(
-                alignment: Alignment(0, -0.75),
+                alignment: Alignment(0, -1.00),
                 child: Container(
                   height: deviceSize.height * 0.40,
                   child: Image(
@@ -38,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Align(
-                alignment: Alignment(0, 0.75),
+                alignment: Alignment(0, 0.5),
                 child: Container(
                   height: deviceSize.height * 0.15,
                   width: deviceSize.width >= 1000
@@ -47,29 +59,33 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Expanded(
-                        child: Image(
-                          image: AssetImage('$image/about-me-icon.png'),
-                          fit: BoxFit.contain,
-                        ),
+                      HomeIconButton(
+                          image: '$image/about-me-icon.png',
+                          tapped: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AboutScreen(),
+                              ),
+                            );
+                          }),
+                      HomeIconButton(
+                        image: '$image/graphic-design-icon.png',
+                        tapped: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => WorkScreen(),
+                            ),
+                          );
+                        },
                       ),
-                      Expanded(
-                        child: Image(
-                          image: AssetImage('$image/graphic-design-icon.png'),
-                          fit: BoxFit.contain,
-                        ),
+                      HomeIconButton(
+                        image: '$image/website-icon.png',
+                        tapped: () => _handlePress('https://gooddogdraws.com'),
                       ),
-                      Expanded(
-                        child: Image(
-                          image: AssetImage('$image/website-icon.png'),
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                      Expanded(
-                        child: Image(
-                          image: AssetImage('$image/writing-icon.png'),
-                          fit: BoxFit.contain,
-                        ),
+                      HomeIconButton(
+                        image: '$image/writing-icon.png',
                       ),
                     ],
                   ),
