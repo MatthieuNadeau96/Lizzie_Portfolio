@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
             fit: StackFit.expand,
             children: [
               Align(
-                alignment: Alignment(0, -1.00),
+                alignment: Alignment(0, 0.5),
                 child: Container(
                   height: deviceSize.height * 0.40,
                   child: Image(
@@ -50,9 +50,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Align(
-                alignment: Alignment(0, 0.5),
+                alignment: Alignment(0, -1.00),
                 child: Container(
-                  height: deviceSize.height * 0.15,
+                  height: deviceSize.height * 0.2,
                   width: deviceSize.width >= 1000
                       ? deviceSize.width * 0.5
                       : deviceSize.width,
@@ -61,6 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       HomeIconButton(
                           image: '$image/about-me-icon.png',
+                          tooltip: 'About Me',
                           tapped: () {
                             Navigator.push(
                               context,
@@ -71,6 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           }),
                       HomeIconButton(
                         image: '$image/graphic-design-icon.png',
+                        tooltip: 'Graphic Design',
                         tapped: () {
                           Navigator.push(
                             context,
@@ -82,10 +84,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       HomeIconButton(
                         image: '$image/website-icon.png',
+                        tooltip: 'My Website',
                         tapped: () => _handlePress('https://gooddogdraws.com'),
                       ),
                       HomeIconButton(
                         image: '$image/writing-icon.png',
+                        tooltip: 'My Writing',
                       ),
                     ],
                   ),
