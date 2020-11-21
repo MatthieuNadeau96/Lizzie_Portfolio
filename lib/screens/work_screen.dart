@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:lizzie_portfolio/model/project_model.dart';
 import 'package:lizzie_portfolio/repository/repository.dart';
@@ -34,7 +35,7 @@ class _WorkScreenState extends State<WorkScreen> {
           ),
           child: GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,
+              crossAxisCount: desktop ? 4 : 2,
               mainAxisSpacing: 15,
               crossAxisSpacing: 15,
             ),
@@ -46,7 +47,9 @@ class _WorkScreenState extends State<WorkScreen> {
                   padding: EdgeInsets.all(15),
                   color: Colors.white,
                   child: Image(
-                    image: AssetImage(project.image),
+                    image: (kIsWeb)
+                        ? AssetImage(project.image)
+                        : AssetImage('assets/${project.image}'),
                     fit: BoxFit.cover,
                   ));
             },

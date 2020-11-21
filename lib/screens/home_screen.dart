@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:lizzie_portfolio/screens/about_screen.dart';
 import 'package:lizzie_portfolio/screens/work_screen.dart';
@@ -22,11 +23,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     var deviceSize = MediaQuery.of(context).size;
     ThemeData theme = Theme.of(context);
-    final desktop = deviceSize.width >= 770;
 
     String mobileImage = 'assets/images';
     String desktopImage = 'images/';
-    String image = desktop ? desktopImage : mobileImage;
+    String image = (kIsWeb) ? desktopImage : mobileImage;
 
     return Scaffold(
       body: Center(
