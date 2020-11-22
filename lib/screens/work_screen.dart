@@ -11,6 +11,12 @@ class WorkScreen extends StatefulWidget {
 class _WorkScreenState extends State<WorkScreen> {
   List<ProjectModel> projects = List<ProjectModel>();
 
+  bool detailOpened = false;
+  String titleDetails;
+  String descriptionDetails;
+  String imageDetails;
+  List<String> carouselImagesDetails;
+
   @override
   void initState() {
     super.initState();
@@ -43,15 +49,41 @@ class _WorkScreenState extends State<WorkScreen> {
             itemBuilder: (context, index) {
               final ProjectModel project = projects[index];
               return Container(
-                  height: 100,
-                  padding: EdgeInsets.all(15),
-                  color: Colors.white,
-                  child: Image(
-                    image: (kIsWeb)
-                        ? AssetImage(project.image)
-                        : AssetImage('assets/${project.image}'),
-                    fit: BoxFit.cover,
-                  ));
+                height: 100,
+                padding: EdgeInsets.all(15),
+                color: Colors.white,
+                child: Stack(
+                  children: [
+                    Center(
+                      child: Image(
+                        image: (kIsWeb)
+                            ? AssetImage(project.image)
+                            : AssetImage('assets/${project.image}'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Positioned.fill(
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          hoverColor: Colors.white10,
+                          focusColor:
+                              Theme.of(context).textTheme.bodyText1.color,
+                          onTap: () {
+                            setState(() {
+                              detailOpened = true;
+                              titleDetails = project.title;
+                              descriptionDetails = project.description;
+                              imageDetails = project.image;
+                              carouselImagesDetails = project.carouselImages;
+                            });
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
             },
           ),
         ),
