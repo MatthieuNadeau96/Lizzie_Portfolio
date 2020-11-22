@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:lizzie_portfolio/model/project_model.dart';
 import 'package:lizzie_portfolio/repository/repository.dart';
+import 'package:lizzie_portfolio/widgets/project_detail_modal.dart';
 
 class WorkScreen extends StatefulWidget {
   @override
@@ -71,6 +72,47 @@ class _WorkScreenState extends State<WorkScreen> {
                               Theme.of(context).textTheme.bodyText1.color,
                           onTap: () {
                             setState(() {
+                              showGeneralDialog(
+                                barrierColor: Colors.black.withOpacity(0.5),
+                                transitionBuilder: (context, a1, a2, widget) {
+                                  final curvedValue =
+                                      Curves.easeInOutBack.transform(a1.value) -
+                                          1.0;
+                                  return Transform(
+                                    transform: Matrix4.translationValues(
+                                      0.0,
+                                      curvedValue * 200,
+                                      0.0,
+                                    ),
+                                    child: Opacity(
+                                      opacity: a1.value,
+                                      child: AlertDialog(
+                                        shape: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(16.0),
+                                        ),
+                                        content: Container(
+                                          height: deviceSize.height * 0.6,
+                                          width: desktop
+                                              ? deviceSize.width * 0.6
+                                              : deviceSize.width * 0.8,
+                                          child: ProjectDetailModal(
+                                            title: project.title,
+                                            description: project.description,
+                                            image: project.image,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                },
+                                transitionDuration: Duration(milliseconds: 200),
+                                barrierDismissible: true,
+                                barrierLabel: '',
+                                context: context,
+                                pageBuilder:
+                                    (context, animation1, animation2) {},
+                              );
                               detailOpened = true;
                               titleDetails = project.title;
                               descriptionDetails = project.description;
