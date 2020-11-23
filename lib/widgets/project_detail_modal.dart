@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -24,42 +25,69 @@ class ProjectDetailModal extends StatelessWidget {
             children: [
               Expanded(
                 child: Container(
-                  height: deviceSize.height * 0.5,
                   width: deviceSize.width * 0.3,
-                  child: Image(
-                    image: (kIsWeb)
-                        ? AssetImage(image)
-                        : AssetImage('assets/$image'),
-                    fit: BoxFit.contain,
-                  ),
+                  child: carouselImages == null
+                      ? Image(
+                          image: (kIsWeb)
+                              ? AssetImage(image)
+                              : AssetImage('assets/$image'),
+                          fit: BoxFit.contain,
+                        )
+                      : CarouselSlider(
+                          options: CarouselOptions(
+                            height: 800.0,
+                            autoPlay: true,
+                            enlargeCenterPage: true,
+                            autoPlayAnimationDuration:
+                                Duration(milliseconds: 850),
+                            autoPlayInterval: Duration(milliseconds: 1800),
+                          ),
+                          items: carouselImages.map((i) {
+                            return Builder(
+                              builder: (BuildContext context) {
+                                return Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  margin: EdgeInsets.symmetric(horizontal: 5.0),
+                                  child: Image(
+                                    image: (kIsWeb)
+                                        ? AssetImage(i)
+                                        : AssetImage('assets/$i'),
+                                    fit: BoxFit.contain,
+                                  ),
+                                );
+                              },
+                            );
+                          }).toList(),
+                        ),
                 ),
               ),
               Expanded(
                 child: Container(
-                  height: deviceSize.height * 0.5,
                   width: deviceSize.width * 0.3,
                   padding: const EdgeInsets.symmetric(
                     horizontal: 15,
                   ),
-                  child: Column(
-                    children: [
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Text(
-                          title,
-                          style: TextStyle(
-                            fontSize: 28,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            title,
+                            style: TextStyle(
+                              fontSize: 28,
+                            ),
                           ),
                         ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(
-                          top: 15,
+                        Container(
+                          margin: const EdgeInsets.only(
+                            top: 15,
+                          ),
+                          // width: 400,
+                          child: Text(description),
                         ),
-                        // width: 400,
-                        child: Text(description),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -71,12 +99,40 @@ class ProjectDetailModal extends StatelessWidget {
                 child: Container(
                   height: 400,
                   child: Center(
-                    child: Image(
-                      image: (kIsWeb)
-                          ? AssetImage(image)
-                          : AssetImage('assets/$image'),
-                      fit: BoxFit.contain,
-                    ),
+                    child: carouselImages == null
+                        ? Image(
+                            image: (kIsWeb)
+                                ? AssetImage(image)
+                                : AssetImage('assets/$image'),
+                            fit: BoxFit.contain,
+                          )
+                        : CarouselSlider(
+                            options: CarouselOptions(
+                              height: 800.0,
+                              autoPlay: true,
+                              enlargeCenterPage: true,
+                              autoPlayAnimationDuration:
+                                  Duration(milliseconds: 850),
+                              autoPlayInterval: Duration(milliseconds: 1800),
+                            ),
+                            items: carouselImages.map((i) {
+                              return Builder(
+                                builder: (BuildContext context) {
+                                  return Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 5.0),
+                                    child: Image(
+                                      image: (kIsWeb)
+                                          ? AssetImage(i)
+                                          : AssetImage('assets/$i'),
+                                      fit: BoxFit.contain,
+                                    ),
+                                  );
+                                },
+                              );
+                            }).toList(),
+                          ),
                   ),
                 ),
               ),

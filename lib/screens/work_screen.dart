@@ -100,6 +100,8 @@ class _WorkScreenState extends State<WorkScreen> {
                                             title: project.title,
                                             description: project.description,
                                             image: project.image,
+                                            carouselImages:
+                                                project.carouselImages,
                                           ),
                                         ),
                                       ),
@@ -118,8 +120,6 @@ class _WorkScreenState extends State<WorkScreen> {
                               descriptionDetails = project.description;
                               imageDetails = project.image;
                               carouselImagesDetails = project.carouselImages;
-                              print('carouselImagesDetails');
-                              print(carouselImagesDetails);
                             });
                           },
                         ),
