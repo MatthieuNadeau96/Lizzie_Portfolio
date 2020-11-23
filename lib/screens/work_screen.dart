@@ -118,6 +118,8 @@ class _WorkScreenState extends State<WorkScreen> {
                               descriptionDetails = project.description;
                               imageDetails = project.image;
                               carouselImagesDetails = project.carouselImages;
+                              print('carouselImagesDetails');
+                              print(carouselImagesDetails);
                             });
                           },
                         ),
