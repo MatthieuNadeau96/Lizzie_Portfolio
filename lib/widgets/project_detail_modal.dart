@@ -75,13 +75,14 @@ class ProjectDetailModal extends StatelessWidget {
                           child: Text(
                             title,
                             style: TextStyle(
-                              fontSize: 28,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
                         Container(
                           margin: const EdgeInsets.only(
-                            top: 15,
+                            top: 30,
                           ),
                           // width: 400,
                           child: Text(description),

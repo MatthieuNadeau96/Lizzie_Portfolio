@@ -83,7 +83,8 @@ List<ProjectModel> getProjects() {
     ),
     ProjectModel(
       title: 'VCD mac',
-      description: '...',
+      description:
+          'This was an ad designed to be played before a film at a movie theater. I photographed the macaroni and cheese and then edited it and added text and the business logo. I kept it simple as I knew it would be on screen for less than 30 seconds. (Made using Adobe Photoshop and dafont.com)',
       image: 'images/graphic-design/VCD-mac.png',
     ),
     ProjectModel(
