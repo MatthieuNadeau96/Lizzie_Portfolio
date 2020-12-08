@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       HomeIconButton(
-                          image: '$image/about-me-icon.png',
+                          image: 'images/about-me-icon.png',
                           tooltip: 'About Me',
                           tapped: () {
                             Navigator.push(
@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             );
                           }),
                       HomeIconButton(
-                        image: '$image/graphic-design-icon.png',
+                        image: 'images/graphic-design-icon.png',
                         tooltip: 'Graphic Design',
                         tapped: () {
                           Navigator.push(
@@ -83,12 +83,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         },
                       ),
                       HomeIconButton(
-                        image: '$image/website-icon.png',
+                        image: 'images/website-icon.png',
                         tooltip: 'My Website',
                         tapped: () => _handlePress('https://gooddogdraws.com'),
                       ),
                       HomeIconButton(
-                        image: '$image/writing-icon.png',
+                        image: 'images/writing-icon.png',
                         tooltip: 'My Writing',
                       ),
                     ],
