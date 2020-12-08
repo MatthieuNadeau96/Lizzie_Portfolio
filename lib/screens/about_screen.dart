@@ -21,7 +21,7 @@ class _AboutScreenState extends State<AboutScreen> {
   Widget build(BuildContext context) {
     var deviceSize = MediaQuery.of(context).size;
     String mobileImage = 'assets/images';
-    String desktopImage = 'images/';
+    String desktopImage = 'images';
     String image = (kIsWeb) ? desktopImage : mobileImage;
     ThemeData theme = Theme.of(context);
     return Scaffold(

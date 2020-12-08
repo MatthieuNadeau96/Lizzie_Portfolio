@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ThemeData theme = Theme.of(context);
 
     String mobileImage = 'assets/images';
-    String desktopImage = 'images/';
+    String desktopImage = 'images';
     String image = (kIsWeb) ? desktopImage : mobileImage;
 
     return Scaffold(

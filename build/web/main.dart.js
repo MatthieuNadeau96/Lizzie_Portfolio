@@ -50445,7 +50445,7 @@ b.V(t.w).toString
 s=E.a22(K.aO(b).f,0)
 r=K.w8(25)
 q=t.fQ
-return M.a0l(s,T.fj(M.bW(o,T.oz(H.c([T.p1(E.a0n(T.oz(H.c([T.fj(M.bW(o,U.k9(o,new L.dX("images//about-me-photo.png"),o),o,o,o,o,o,C.lk,o),o,o),L.rE("I am a freelance artist and visual communicator. I started my own art brand, Good Dog Draws, in 2017 and love seeing how it has evolved and grown. Animals, plants, and shoes are my favorite drawing subjects. Procreate is my go-to software, but I used Adobe Suite all throughout college. As a quick and curious learner, I\u2019m sure I will venture into other softwares at one point or another.\n\nI graduated from the University of Vermont with a B.S. in Public Communication and minored in Studio Art. I currently am accepting personal commissions (portraits, custom illustrations, etc), as well as professional business commissions (logos, signage, pamphlets, etc). I am also open to working with a single company full time if it is the right fit. Please do not hesitate to reach out and start a conversation about how I can be of assistance to you or your company.",A.jb(o,o,o,o,o,o,o,o,o,o,o,20,o,o,o,o,!0,o,o,o,o,o,o))],q),C.bG,C.bZ,C.by))),M.bW(o,T.a0k(H.c([B.lM(o,Z.KS(C.vo),new T.Uh(p),o),B.lM(o,Z.KS(C.vn),new T.Ui(p),o),B.lM(o,Z.KS(C.vp),new T.Uj(p),o),B.lM(o,Z.KS(C.vm),new T.Uk(p),o)],q),C.bG,C.mo,C.by),o,o,o,o,o,C.lk,o)],q),C.bG,C.bZ,C.by),o,o,new S.dY(C.j,o,o,r,o,o,C.ae),o,C.uY,C.v1,500),o,o))}}
+return M.a0l(s,T.fj(M.bW(o,T.oz(H.c([T.p1(E.a0n(T.oz(H.c([T.fj(M.bW(o,U.k9(o,new L.dX("images/about-me-photo.png"),o),o,o,o,o,o,C.lk,o),o,o),L.rE("I am a freelance artist and visual communicator. I started my own art brand, Good Dog Draws, in 2017 and love seeing how it has evolved and grown. Animals, plants, and shoes are my favorite drawing subjects. Procreate is my go-to software, but I used Adobe Suite all throughout college. As a quick and curious learner, I\u2019m sure I will venture into other softwares at one point or another.\n\nI graduated from the University of Vermont with a B.S. in Public Communication and minored in Studio Art. I currently am accepting personal commissions (portraits, custom illustrations, etc), as well as professional business commissions (logos, signage, pamphlets, etc). I am also open to working with a single company full time if it is the right fit. Please do not hesitate to reach out and start a conversation about how I can be of assistance to you or your company.",A.jb(o,o,o,o,o,o,o,o,o,o,o,20,o,o,o,o,!0,o,o,o,o,o,o))],q),C.bG,C.bZ,C.by))),M.bW(o,T.a0k(H.c([B.lM(o,Z.KS(C.vo),new T.Uh(p),o),B.lM(o,Z.KS(C.vn),new T.Ui(p),o),B.lM(o,Z.KS(C.vp),new T.Uj(p),o),B.lM(o,Z.KS(C.vm),new T.Uk(p),o)],q),C.bG,C.mo,C.by),o,o,o,o,o,C.lk,o)],q),C.bG,C.bZ,C.by),o,o,new S.dY(C.j,o,o,r,o,o,C.ae),o,C.uY,C.v1,500),o,o))}}
 T.Uh.prototype={
 $0:function(){return this.a.h0("https://www.instagram.com/gooddoggyboy/")},
 $C:"$0",
@@ -50483,10 +50483,10 @@ break
 case 4:throw H.a("Could not launch "+a)
 case 3:return P.ac(null,r)}})
 return P.ad($async$l_,r)},
-I:function(a,b){var s,r=null,q=b.V(t.w).f.a,p=K.aO(b),o=q.b,n=p.f,m=q.a,l=M.bW(r,U.k9(C.ce,new L.dX("images//title-icon.png"),m),r,r,r,o*0.4,r,r,r)
+I:function(a,b){var s,r=null,q=b.V(t.w).f.a,p=K.aO(b),o=q.b,n=p.f,m=q.a,l=M.bW(r,U.k9(C.ce,new L.dX("images/title-icon.png"),m),r,r,r,o*0.4,r,r,r)
 if(m>=1000)m*=0.5
 s=t.fQ
-return M.a0l(r,T.fj(M.bW(r,T.ru(C.aX,H.c([new T.el(new K.cl(0,0.5),r,r,l,r),new T.el(new K.cl(0,-1),r,r,M.bW(r,T.a0k(H.c([new F.k5("images//about-me-icon.png","About Me",new V.VW(b),r),new F.k5("images//graphic-design-icon.png","Graphic Design",new V.VX(b),r),new F.k5("images//website-icon.png","My Website",new V.VY(this),r),new F.k5("images//writing-icon.png","My Writing",r,r)],s),C.bG,C.mo,C.by),r,r,r,o*0.2,r,r,m),r)],s),C.r2),n,r,r,o*0.5,r,r,r),r,r))}}
+return M.a0l(r,T.fj(M.bW(r,T.ru(C.aX,H.c([new T.el(new K.cl(0,0.5),r,r,l,r),new T.el(new K.cl(0,-1),r,r,M.bW(r,T.a0k(H.c([new F.k5("images/about-me-icon.png","About Me",new V.VW(b),r),new F.k5("images/graphic-design-icon.png","Graphic Design",new V.VX(b),r),new F.k5("images/website-icon.png","My Website",new V.VY(this),r),new F.k5("images/writing-icon.png","My Writing",r,r)],s),C.bG,C.mo,C.by),r,r,r,o*0.2,r,r,m),r)],s),C.r2),n,r,r,o*0.5,r,r,r),r,r))}}
 V.VW.prototype={
 $0:function(){var s=V.a0_(new V.VV(),null,t.z)
 K.q6(this.a,!1).jW(s)},
