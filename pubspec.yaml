@@ -55,6 +55,8 @@ flutter:
     - assets/images/website-icon.png
     - assets/images/writing-icon.png
     
+    - assets/images/about-me-photo.png
+    
     - assets/images/graphic-design/tri-fold-business-pamphlet.png
     - assets/images/graphic-design/logo-design.png
     - assets/images/graphic-design/promotional-poster.png
