@@ -27,10 +27,8 @@ class ProjectDetailModal extends StatelessWidget {
                 child: Container(
                   width: deviceSize.width * 0.3,
                   child: carouselImages == null
-                      ? Image(
-                          image: (kIsWeb)
-                              ? AssetImage(image)
-                              : AssetImage('assets/$image'),
+                      ? Image.asset(
+                          (kIsWeb) ? image : 'assets/$image',
                           fit: BoxFit.contain,
                         )
                       : CarouselSlider(
@@ -48,10 +46,8 @@ class ProjectDetailModal extends StatelessWidget {
                                 return Container(
                                   width: MediaQuery.of(context).size.width,
                                   margin: EdgeInsets.symmetric(horizontal: 5.0),
-                                  child: Image(
-                                    image: (kIsWeb)
-                                        ? AssetImage(i)
-                                        : AssetImage('assets/$i'),
+                                  child: Image.asset(
+                                    (kIsWeb) ? i : 'assets/$i',
                                     fit: BoxFit.contain,
                                   ),
                                 );

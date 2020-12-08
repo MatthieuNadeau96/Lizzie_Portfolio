@@ -16,8 +16,8 @@ class HomeIconButton extends StatelessWidget {
           verticalOffset: 80,
           child: InkWell(
             onTap: tapped,
-            child: Image(
-              image: AssetImage(image),
+            child: Image.asset(
+              image,
               fit: BoxFit.contain,
             ),
           ),
