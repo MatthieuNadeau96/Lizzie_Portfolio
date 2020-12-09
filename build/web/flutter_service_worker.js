@@ -3,11 +3,12 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "2da01bf58868ffa4038f70a1fbe67283",
+  "assets/AssetManifest.json": "6dc5520df0c9a72e6af24f0491dda15e",
 "assets/assets/images/about-me-icon.png": "4281db0e6eb42170682f9ef0bc15c1cb",
 "assets/assets/images/about-me-photo.png": "5c61e1cfa085ac3d2688b8701e09cb02",
 "assets/assets/images/graphic-design/ad-design.png": "8d568d22e08038fa5a949ffa6b20019b",
 "assets/assets/images/graphic-design/catering-menu-gelato.jpg": "7c26234611c436ead2899faab7cb1997",
+"assets/assets/images/graphic-design/clarke-014-brochure-back-copy.jpg": "9fc870900f571bb762428ade033fe20a",
 "assets/assets/images/graphic-design/coffee-card-design.png": "8907fe7ae762cb1f779a7161deed72cf",
 "assets/assets/images/graphic-design/gelato-blueberry.png": "4e119517a3d2392aa271d741870686f1",
 "assets/assets/images/graphic-design/gelato-caramel.png": "f8e899708ccb68c405ac990beb1d9e4d",
@@ -33,6 +34,7 @@ const RESOURCES = {
 "assets/assets/images/graphic-design/store-signage.png": "bef5b8bb303037cadd72f885fc3a42e5",
 "assets/assets/images/graphic-design/tri-fold-business-pamphlet.png": "2a12b46deacd255204c483bb1bb295a7",
 "assets/assets/images/graphic-design/VCD-mac.png": "e7c56442b7a7fcc941a6b1901dc0e68a",
+"assets/assets/images/graphic-design/vt-gelato-event-flavors.jpg": "8253655da717749af17d40e1c7960065",
 "assets/assets/images/graphic-design-icon.png": "024f7c76931d8c67cd44bfb0f8a1caa7",
 "assets/assets/images/title-icon.png": "eef956364aca49440914150fd40347f6",
 "assets/assets/images/website-icon.png": "b41ad6790ea4d1ea309ec540723c2d83",
@@ -43,7 +45,7 @@ const RESOURCES = {
 "assets/images/About-me-photo.png": "5c61e1cfa085ac3d2688b8701e09cb02",
 "assets/images/graphic-design/ad-design.png": "8d568d22e08038fa5a949ffa6b20019b",
 "assets/images/graphic-design/catering-menu-gelato.jpg": "7c26234611c436ead2899faab7cb1997",
-"assets/images/graphic-design/clarke%20014%20brochure%20back%20copy.jpg": "9fc870900f571bb762428ade033fe20a",
+"assets/images/graphic-design/clarke-014-brochure-back-copy.jpg": "9fc870900f571bb762428ade033fe20a",
 "assets/images/graphic-design/Clarke-Woodworking-03-copy.png": "83d46831c75ba17810a511b164c9d28d",
 "assets/images/graphic-design/coffee-card-design.png": "8907fe7ae762cb1f779a7161deed72cf",
 "assets/images/graphic-design/gelato-blueberry.png": "4e119517a3d2392aa271d741870686f1",
@@ -70,7 +72,7 @@ const RESOURCES = {
 "assets/images/graphic-design/store-signage.png": "bef5b8bb303037cadd72f885fc3a42e5",
 "assets/images/graphic-design/tri-fold-business-pamphlet.png": "2a12b46deacd255204c483bb1bb295a7",
 "assets/images/graphic-design/VCD-mac.png": "e7c56442b7a7fcc941a6b1901dc0e68a",
-"assets/images/graphic-design/vt%20gelato%20event%20flavors.jpg": "8253655da717749af17d40e1c7960065",
+"assets/images/graphic-design/vt-gelato-event-flavors.jpg": "8253655da717749af17d40e1c7960065",
 "assets/images/graphic-design-icon.png": "024f7c76931d8c67cd44bfb0f8a1caa7",
 "assets/images/title-icon.png": "eef956364aca49440914150fd40347f6",
 "assets/images/website-icon.png": "b41ad6790ea4d1ea309ec540723c2d83",
@@ -83,9 +85,9 @@ const RESOURCES = {
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "16ad25db1fc4b672e64193634440c291",
-"/": "16ad25db1fc4b672e64193634440c291",
-"main.dart.js": "1da4847c8a75d2fb4fc0ee2d30e05cba",
+"index.html": "fc1d6b0e825b4403390412e2edd192dd",
+"/": "fc1d6b0e825b4403390412e2edd192dd",
+"main.dart.js": "28cd270a1d0cc924a7443151f02ddb30",
 "manifest.json": "e7bc722a1866535822d4b1f8babba57b",
 "version.json": "48ff67d7b2b6691e384458771564c310"
 };
