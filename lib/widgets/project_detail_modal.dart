@@ -88,6 +88,20 @@ class ProjectDetailModal extends StatelessWidget {
                   ),
                 ),
               ),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: FlatButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(30.0),
+                  ),
+                  color: Colors.grey[400],
+                  onPressed: Navigator.of(context).pop,
+                  child: Text(
+                    'Close',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
             ],
           )
         : Column(
@@ -155,6 +169,20 @@ class ProjectDetailModal extends StatelessWidget {
                         Text(description),
                       ],
                     ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: FlatButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(30.0),
+                  ),
+                  color: Colors.grey[400],
+                  onPressed: Navigator.of(context).pop,
+                  child: Text(
+                    'Close',
+                    style: TextStyle(color: Colors.white),
                   ),
                 ),
               ),
