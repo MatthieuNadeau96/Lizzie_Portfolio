@@ -3,6 +3,12 @@ import 'package:lizzie_portfolio/model/project_model.dart';
 List<ProjectModel> getProjects() {
   List<ProjectModel> projects = [
     ProjectModel(
+      title: 'PROJECT: Tri-fold Business Pamphlet (outside)',
+      description:
+          'This assignment was all about layout and readability. The copy was provided, but needed to be placed strategically and stylized to create an informative and attractive hand-out for customers. The orchard logo was pulled from their website for the purpose of this project. I chose two complementary fonts that hinted at both the historical aspects of apple orchards and the modern day fall staple apple picking has become. (Made with Adobe InDesign and dafont.com)',
+      image: 'images/graphic-design/clarke-014-brochure-back-copy.jpg',
+    ),
+    ProjectModel(
       title: 'PROJECT: Tri-fold Business Pamphlet (inside)',
       description:
           'This assignment was all about layout and readability. The inside of this pamphlet contains three recipes involving apples that I found online. The biggest challenge here was formatting the recipes so that each section was the same size as in the following recipes. These alignments help the page look organized and clean despite the amount of information being given. (Made using Adobe InDesign, royalty free images and dafont.com)',
@@ -128,6 +134,12 @@ List<ProjectModel> getProjects() {
       description:
           'A menu to be handed out to potential catering customers, informing them of prices and flavor options. (Made using Adobe InDesign)',
       image: 'images/graphic-design/catering-menu-gelato.jpg',
+    ),
+    ProjectModel(
+      title: 'Flavor Labels for the Vermont Gelato Company',
+      description:
+          'These labels are used to inform customers which gelato is which when at events or other mobile scoop shops. Blank ones were also printed for specialty flavors that may arise. (Made using Adobe Illustrator)',
+      image: 'images/graphic-design/vt-gelato-event-flavors.jpg',
     ),
   ];
   return projects;
