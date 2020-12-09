@@ -75,32 +75,34 @@ class _AboutScreenState extends State<AboutScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    IconButton(
-                      onPressed: () => _handlePress(
-                          'https://www.instagram.com/gooddoggyboy/'),
-                      icon: FaIcon(
-                        FontAwesomeIcons.instagram,
+                    Tooltip(
+                      message: 'My Instagram',
+                      child: IconButton(
+                        onPressed: () => _handlePress(
+                            'https://www.instagram.com/gooddoggyboy/'),
+                        icon: FaIcon(
+                          FontAwesomeIcons.instagram,
+                        ),
                       ),
                     ),
-                    IconButton(
-                      onPressed: () => _handlePress(
-                          'https://www.linkedin.com/in/lizzie-clarke/'),
-                      icon: FaIcon(
-                        FontAwesomeIcons.linkedin,
+                    Tooltip(
+                      message: 'My Linkedin',
+                      child: IconButton(
+                        onPressed: () => _handlePress(
+                            'https://www.linkedin.com/in/lizzie-clarke/'),
+                        icon: FaIcon(
+                          FontAwesomeIcons.linkedin,
+                        ),
                       ),
                     ),
-                    IconButton(
-                      onPressed: () =>
-                          _handlePress('mailto:elizabeth.clarke.20@gmail.com'),
-                      icon: FaIcon(
-                        FontAwesomeIcons.envelope,
-                      ),
-                    ),
-                    IconButton(
-                      onPressed: () =>
-                          _handlePress('https://elizabeth-clarke.medium.com'),
-                      icon: FaIcon(
-                        FontAwesomeIcons.medium,
+                    Tooltip(
+                      message: 'Email me',
+                      child: IconButton(
+                        onPressed: () => _handlePress(
+                            'mailto:elizabeth.clarke.20@gmail.com'),
+                        icon: FaIcon(
+                          FontAwesomeIcons.envelope,
+                        ),
                       ),
                     ),
                   ],

@@ -90,6 +90,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       HomeIconButton(
                         image: 'images/writing-icon.png',
                         tooltip: 'My Writing',
+                        tapped: () =>
+                            _handlePress('https://elizabeth-clarke.medium.com'),
                       ),
                     ],
                   ),
