@@ -52,7 +52,10 @@ class _WorkScreenState extends State<WorkScreen> {
               return Container(
                 height: 100,
                 padding: EdgeInsets.all(15),
-                color: Colors.white,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(8),
+                ),
                 child: Stack(
                   children: [
                     Center(

@@ -94,7 +94,7 @@ class ProjectDetailModal extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(30.0),
                   ),
-                  color: Colors.grey[400],
+                  color: Colors.grey[600],
                   onPressed: Navigator.of(context).pop,
                   child: Text(
                     'Close',
@@ -178,7 +178,7 @@ class ProjectDetailModal extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(30.0),
                   ),
-                  color: Colors.grey[400],
+                  color: Colors.grey[600],
                   onPressed: Navigator.of(context).pop,
                   child: Text(
                     'Close',

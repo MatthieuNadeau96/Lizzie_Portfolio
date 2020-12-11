@@ -24,94 +24,203 @@ class _AboutScreenState extends State<AboutScreen> {
     String desktopImage = 'images';
     String image = (kIsWeb) ? desktopImage : mobileImage;
     ThemeData theme = Theme.of(context);
+    final desktop = deviceSize.width >= 770;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: theme.canvasColor,
+        iconTheme: desktop ? IconThemeData(color: Colors.black) : null,
+        backgroundColor: desktop ? Colors.white : theme.canvasColor,
         elevation: 0,
       ),
-      body: Center(
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(25),
-          ),
-          margin: const EdgeInsets.only(
-            bottom: 56,
-          ),
-          padding: const EdgeInsets.symmetric(
-            horizontal: 30,
-            vertical: 15,
-          ),
-          width: 500,
-          child: Column(
-            children: [
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
+      body: desktop
+          ? Container(
+              color: Colors.white,
+              child: Center(
+                child: Container(
+                  color: Colors.white,
+                  // height: 600,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Center(
+                      Expanded(
+                        flex: 2,
                         child: Container(
-                            padding: const EdgeInsets.symmetric(
-                              vertical: 15,
-                            ),
-                            child: Image(
-                              image: AssetImage('$image/about-me-photo.png'),
-                            )),
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 15,
+                            horizontal: 15,
+                          ),
+                          child: Image(
+                            image: AssetImage('$image/about-me-photo.png'),
+                          ),
+                        ),
                       ),
-                      Text(
-                        'I am a freelance artist and visual communicator. I started my own art brand, Good Dog Draws, in 2017 and love seeing how it has evolved and grown. Animals, plants, and shoes are my favorite drawing subjects. Procreate is my go-to software, but I used Adobe Suite all throughout college. As a quick and curious learner, I’m sure I will venture into other softwares at one point or another.\n\nI graduated from the University of Vermont with a B.S. in Public Communication and minored in Studio Art. I currently am accepting personal commissions (portraits, custom illustrations, etc), as well as professional business commissions (logos, signage, pamphlets, etc). I am also open to working with a single company full time if it is the right fit. Please do not hesitate to reach out and start a conversation about how I can be of assistance to you or your company.',
-                        style: TextStyle(
-                          fontSize: 20,
+                      Expanded(
+                        flex: 2,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Spacer(
+                              flex: 1,
+                            ),
+                            Expanded(
+                              flex: 4,
+                              child: SingleChildScrollView(
+                                child: Container(
+                                  // height: 700,
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 15,
+                                    vertical: 15,
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'I am a freelance artist and visual communicator. I started my own art brand, Good Dog Draws, in 2017 and love seeing how it has evolved and grown. Animals, plants, and shoes are my favorite drawing subjects. Procreate is my go-to software, but I used Adobe Suite all throughout college. As a quick and curious learner, I’m sure I will venture into other softwares at one point or another.\n\nI graduated from the University of Vermont with a B.S. in Public Communication and minored in Studio Art. I currently am accepting personal commissions (portraits, custom illustrations, etc), as well as professional business commissions (logos, signage, pamphlets, etc). I am also open to working with a single company full time if it is the right fit. Please do not hesitate to reach out and start a conversation about how I can be of assistance to you or your company.',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: 80,
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 15,
+                                horizontal: 15,
+                              ),
+                              // width: 500,
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Tooltip(
+                                    message: 'My Instagram',
+                                    child: IconButton(
+                                      onPressed: () => _handlePress(
+                                          'https://www.instagram.com/gooddoggyboy/'),
+                                      icon: FaIcon(
+                                        FontAwesomeIcons.instagram,
+                                      ),
+                                    ),
+                                  ),
+                                  Tooltip(
+                                    message: 'My Linkedin',
+                                    child: IconButton(
+                                      onPressed: () => _handlePress(
+                                          'https://www.linkedin.com/in/lizzie-clarke/'),
+                                      icon: FaIcon(
+                                        FontAwesomeIcons.linkedin,
+                                      ),
+                                    ),
+                                  ),
+                                  Tooltip(
+                                    message: 'Email me',
+                                    child: IconButton(
+                                      onPressed: () => _handlePress(
+                                          'mailto:elizabeth.clarke.20@gmail.com'),
+                                      icon: FaIcon(
+                                        FontAwesomeIcons.envelope,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Spacer(
+                              flex: 1,
+                            ),
+                          ],
                         ),
                       ),
                     ],
                   ),
                 ),
               ),
-              Container(
+            )
+          : Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                margin: const EdgeInsets.only(
+                  bottom: 56,
+                ),
                 padding: const EdgeInsets.symmetric(
+                  horizontal: 30,
                   vertical: 15,
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                width: 500,
+                child: Column(
                   children: [
-                    Tooltip(
-                      message: 'My Instagram',
-                      child: IconButton(
-                        onPressed: () => _handlePress(
-                            'https://www.instagram.com/gooddoggyboy/'),
-                        icon: FaIcon(
-                          FontAwesomeIcons.instagram,
+                    Expanded(
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            Center(
+                              child: Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    vertical: 15,
+                                  ),
+                                  child: Image(
+                                    image:
+                                        AssetImage('$image/about-me-photo.png'),
+                                  )),
+                            ),
+                            Text(
+                              'I am a freelance artist and visual communicator. I started my own art brand, Good Dog Draws, in 2017 and love seeing how it has evolved and grown. Animals, plants, and shoes are my favorite drawing subjects. Procreate is my go-to software, but I used Adobe Suite all throughout college. As a quick and curious learner, I’m sure I will venture into other softwares at one point or another.\n\nI graduated from the University of Vermont with a B.S. in Public Communication and minored in Studio Art. I currently am accepting personal commissions (portraits, custom illustrations, etc), as well as professional business commissions (logos, signage, pamphlets, etc). I am also open to working with a single company full time if it is the right fit. Please do not hesitate to reach out and start a conversation about how I can be of assistance to you or your company.',
+                              style: TextStyle(
+                                fontSize: 20,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                    Tooltip(
-                      message: 'My Linkedin',
-                      child: IconButton(
-                        onPressed: () => _handlePress(
-                            'https://www.linkedin.com/in/lizzie-clarke/'),
-                        icon: FaIcon(
-                          FontAwesomeIcons.linkedin,
-                        ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 15,
                       ),
-                    ),
-                    Tooltip(
-                      message: 'Email me',
-                      child: IconButton(
-                        onPressed: () => _handlePress(
-                            'mailto:elizabeth.clarke.20@gmail.com'),
-                        icon: FaIcon(
-                          FontAwesomeIcons.envelope,
-                        ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Tooltip(
+                            message: 'My Instagram',
+                            child: IconButton(
+                              onPressed: () => _handlePress(
+                                  'https://www.instagram.com/gooddoggyboy/'),
+                              icon: FaIcon(
+                                FontAwesomeIcons.instagram,
+                              ),
+                            ),
+                          ),
+                          Tooltip(
+                            message: 'My Linkedin',
+                            child: IconButton(
+                              onPressed: () => _handlePress(
+                                  'https://www.linkedin.com/in/lizzie-clarke/'),
+                              icon: FaIcon(
+                                FontAwesomeIcons.linkedin,
+                              ),
+                            ),
+                          ),
+                          Tooltip(
+                            message: 'Email me',
+                            child: IconButton(
+                              onPressed: () => _handlePress(
+                                  'mailto:elizabeth.clarke.20@gmail.com'),
+                              icon: FaIcon(
+                                FontAwesomeIcons.envelope,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
                 ),
               ),
-            ],
-          ),
-        ),
-      ),
+            ),
     );
   }
 }
